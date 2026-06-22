@@ -157,7 +157,7 @@ export function Hero() {
               className="glass gradient-border group rounded-xl border border-border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="text-2xl font-bold text-foreground">
+              <div className="text-2xl font-bold text-white">
                 {stat.value}
               </div>
               <div className="mt-1 text-xs text-muted-foreground">{stat.label}</div>
