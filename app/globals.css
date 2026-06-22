@@ -430,7 +430,7 @@
     height: 4px;
     border-radius: 9999px;
     background: var(--muted);
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
   }
   .progress-bar-fill {

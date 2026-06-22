@@ -58,10 +58,10 @@ export function About() {
           ].map((s, i) => (
             <ScrollReveal key={s.label} variant="zoom" delay={i * 100}>
               <div className="glass gradient-border rounded-xl border border-border p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
-               <div className="text-3xl font-bold text-white">
+                <div className="text-3xl font-bold text-foreground">
                   <CountUp to={s.value} suffix={s.suffix} />
                 </div>
-                <div className="mt-1 text-xs text-foreground">{s.label}</div>
+                <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
               </div>
             </ScrollReveal>
           ))}

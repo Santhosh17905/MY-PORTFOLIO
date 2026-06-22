@@ -115,6 +115,7 @@ export function Hero() {
           <Button
             size="lg"
             className="group relative overflow-hidden"
+            nativeButton={false}
             render={<a href={profile.resumeUrl} target="_blank" rel="noreferrer" />}
           >
             <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-300 group-hover:translate-x-0" />
@@ -125,6 +126,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             className="group transition-all hover:border-primary/60"
+            nativeButton={false}
             render={<a href={profile.social.github} target="_blank" rel="noreferrer" />}
           >
             <GithubIcon className="size-4 transition-transform group-hover:scale-110" />
@@ -134,6 +136,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             className="group transition-all hover:border-primary/60"
+            nativeButton={false}
             render={<a href={profile.social.linkedin} target="_blank" rel="noreferrer" />}
           >
             <LinkedinIcon className="size-4 transition-transform group-hover:scale-110" />
@@ -154,13 +157,11 @@ export function Hero() {
           ].map((stat, i) => (
             <div
               key={stat.label}
-              className="glass gradient-border group rounded-xl border border-border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10"
+              className="rounded-xl border border-border bg-card/80 backdrop-blur-sm p-4"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="text-2xl font-bold text-white">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-xs text-muted-foreground">{stat.label}</div>
+              <p className="text-2xl font-bold text-foreground">{stat.value}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>
